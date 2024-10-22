@@ -1,0 +1,44 @@
+{
+  "name": "ali-stt-ts",
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsup",
+    "release": "bumpp"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/wearzdk/ali-stt-ts#readme",
+  "bugs": {
+    "url": "https://github.com/wearzdk/ali-stt-ts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wearzdk/ali-stt-ts.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/uuid": "^10.0.0",
+    "bumpp": "^9.7.1",
+    "tsup": "^8.3.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "uuid": "^10.0.0",
+    "ws": "^8.18.0"
+  }
+}
