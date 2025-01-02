@@ -35,6 +35,11 @@ export class AliSTT extends EventEmitter<AliSTTEventMap> {
     enablePing: boolean = true,
     pingInterval: number = 6000
   ): Promise<string> {
+    // 清理旧的client
+    if (this._client) {
+      this._client.shutdown();
+      this._client = null;
+    }
     this._client = new NlsClient({
       url: this._config.url,
       appkey: this._config.appKey,
