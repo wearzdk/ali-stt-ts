@@ -1,14 +1,9 @@
 import WebSocket from "ws";
 import assert from "assert";
 import { v4 as uuidv4 } from "uuid";
+import type { NlsConfig } from "./types";
 
-interface NlsConfig {
-  url: string;
-  appkey: string;
-  token: string;
-}
-
-class NlsClient {
+export class NlsClient {
   private _config: NlsConfig;
   private _ws: WebSocket | null = null;
   private _ping: NodeJS.Timeout | null = null;

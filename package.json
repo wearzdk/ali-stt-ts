@@ -1,7 +1,7 @@
 {
   "name": "ali-stt-ts",
   "type": "module",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "scripts": {
     "build": "tsup",
     "release": "bumpp"

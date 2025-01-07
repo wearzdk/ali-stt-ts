@@ -5,6 +5,12 @@ export interface AliSTTConfig {
   [key: string]: any;
 }
 
+export interface NlsConfig {
+  url: string;
+  appkey: string;
+  token: string;
+}
+
 export interface StartParams {
   format: string;
   sample_rate: number;
